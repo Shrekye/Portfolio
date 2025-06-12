@@ -7,10 +7,10 @@
 }
 
 .light-mode {
-  --bg: #f4f4f4;
-  --fg: #111;
-  --accent: #00bfa6;
-  --accent-dark: #009c84;
+  --bg: #fdfdfd;
+  --fg: #111111;
+  --accent: #007c76;
+  --accent-dark: #005c58;
   --card-bg: #ffffff;
 }
 
