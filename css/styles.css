@@ -206,3 +206,7 @@ footer {
   background: var(--accent-dark);
 }
 
+.card, .section {
+  box-shadow: 0 4px 20px var(--shadow);
+  border-radius: 12px;
+}
