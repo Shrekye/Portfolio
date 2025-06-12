@@ -126,9 +126,16 @@
     <p>© 2025 Erwann Dumas — Tous droits réservés.</p>
   </footer>
   <script>
-    const toggleBtn = document.getElementById("theme-toggle");
-    toggleBtn.addEventListener("click", () => {
-      document.documentElement.classList.toggle("light-mode");
+    const toggle = document.getElementById('theme-toggle');
+    const body = document.body;
+  
+    if (localStorage.getItem('theme') === 'dark') {
+      body.classList.add('dark-theme');
+    }
+  
+    toggle.addEventListener('click', () => {
+      body.classList.toggle('dark-theme');
+      localStorage.setItem('theme', body.classList.contains('dark-theme') ? 'dark' : 'light');
     });
   </script>
 </body>
