@@ -27,6 +27,7 @@ body {
   background-color: var(--bg);
   color: var(--fg);
   line-height: 1.6;
+  transition: background-color 0.4s, color 0.4s;
 }
 
 .container {
@@ -77,13 +78,11 @@ body {
 }
 
 .hero {
+  background: linear-gradient(to bottom, #e9f3f1, #d6eeea);
+  color: var(--fg);
+}
+body.dark-theme .hero {
   background: url('../assets/images/bg.jpg') center/cover no-repeat;
-  position: relative;
-  height: 90vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
 }
 
 .hero .overlay {
@@ -188,23 +187,23 @@ footer {
 }
 
 #theme-toggle {
+  background: var(--accent);
+  color: var(--fg);
+  border: none;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
   position: absolute;
   top: 1rem;
   right: 1.5rem;
-  z-index: 1000;
-  background: var(--accent);
-  color: black;
-  border: none;
-  border-radius: 30px;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  font-weight: 600;
-  transition: background 0.3s;
+  transition: background 0.3s, color 0.3s;
 }
 
 #theme-toggle:hover {
   background: var(--accent-dark);
 }
+
 
 .card, .section {
   box-shadow: 0 4px 20px var(--shadow);
