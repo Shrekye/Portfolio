@@ -1,9 +1,10 @@
 :root {
-  --bg: #ffffff;
-  --fg: #121212;
+  --bg: #f7f8fa;
+  --fg: #1e1e1e;
   --accent: #00bfa6;
   --accent-dark: #009e89;
-  --card-bg: #f3f3f3;
+  --card-bg: #ffffff;
+  --shadow: rgba(0, 0, 0, 0.05);
 }
 
 body.dark-theme {
@@ -12,6 +13,7 @@ body.dark-theme {
   --accent: #00ffd5;
   --accent-dark: #00c2a2;
   --card-bg: #1a1a1a;
+  --shadow: rgba(0, 0, 0, 0.3);
 }
 
 * {
