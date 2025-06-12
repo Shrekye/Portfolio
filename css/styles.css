@@ -1,39 +1,18 @@
 :root {
+  --bg: #ffffff;
+  --fg: #121212;
+  --accent: #00bfa6;
+  --accent-dark: #009e89;
+  --card-bg: #f3f3f3;
+}
+
+body.dark-theme {
   --bg: #0d0d0d;
   --fg: #f1f1f1;
   --accent: #00ffd5;
   --accent-dark: #00c2a2;
   --card-bg: #1a1a1a;
 }
-
-.light-mode {
-  --bg: #fdfdfd;
-  --fg: #111111;
-  --accent: #007c76;
-  --accent-dark: #005c58;
-  --card-bg: #ffffff;
-}
-
-#theme-toggle {
-  position: fixed;
-  bottom: 1.5rem;
-  right: 1.5rem;
-  background: var(--card-bg);
-  border: 2px solid var(--accent);
-  border-radius: 50%;
-  font-size: 1.2rem;
-  padding: 0.6rem;
-  cursor: pointer;
-  transition: background 0.3s, transform 0.2s;
-  z-index: 2000;
-}
-
-#theme-toggle:hover {
-  background: var(--accent);
-  color: #000;
-  transform: scale(1.1);
-}
-
 
 * {
   box-sizing: border-box;
@@ -205,3 +184,23 @@ footer {
   background: var(--card-bg);
   color: #999;
 }
+
+#theme-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  z-index: 1000;
+  background: var(--accent);
+  color: black;
+  border: none;
+  border-radius: 30px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+#theme-toggle:hover {
+  background: var(--accent-dark);
+}
+
