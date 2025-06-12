@@ -1,117 +1,149 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Erwann Dumas - Portfolio Cybersécurité</title>
-<link rel="stylesheet" href="css/styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Erwann Dumas - Cybersécurité & Pentesting</title>
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-<header>
-    <img src="assets/images/erwann-dumas.jpg" alt="Photo d'Erwann Dumas" />
+
+  <nav>
+    <div class="logo">Erwann Dumas</div>
+    <ul>
+      <li><a href="#about" class="active">À propos</a></li>
+      <li><a href="#experience">Expériences</a></li>
+      <li><a href="#education">Formations</a></li>
+      <li><a href="#skills">Compétences</a></li>
+      <li><a href="#projects">Projets</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <img src="assets/images/erwann-dumas.jpg" alt="Erwann Dumas" class="hero-img" />
     <h1>Erwann Dumas</h1>
-    <p class="subtitle">CTF player || Guardia Cybersecurity School || Red teamer</p>
-    <p class="summary">
-        Étudiant en cybersécurité à la recherche d'un stage. Passionné, autonome et expérimenté.
-        J’ai aussi participé à des compétitions pour repousser mes limites. Besoin d’un stagiaire pour sécuriser vos systèmes ? Je suis la solution.
+    <p>CTF player || Guardia Cybersecurity School || Red teamer</p>
+    <p class="hero-summary">
+      Étudiant en cybersécurité passionné et autonome, je participe à des compétitions pour repousser mes limites.
+      Besoin d’un stagiaire pour sécuriser vos systèmes ? Je suis la solution.
     </p>
-</header>
+    <a href="#contact" class="btn-primary">Me contacter</a>
+  </header>
 
-<main>
+  <main>
     <section id="about">
-        <h2>À propos</h2>
-        <p>Étudiant à la Guardia Cybersecurity School, spécialisé dans les tests de pénétration et la sécurité des applications web. Actuellement pentester/auditeur chez AX'IOM.</p>
-        <p><strong>Localisation :</strong> Lyon, Auvergne-Rhône-Alpes, France</p>
-        <p><strong>Langues :</strong> Français (natif), Anglais (professionnel), Espagnol (niveau limité)</p>
-    </section>
-
-    <section id="skills">
-        <h2>Principales compétences</h2>
-        <ul class="skills-list">
-            <li>Leadership</li>
-            <li>Discipline</li>
-            <li>Gestion du stress</li>
-            <li>Web Pentesting : Burp Suite, Hydra, Hashcat</li>
-            <li>OSINT : Google Dorks, Pimeyes, WayBack Machine, Shodan, The Harvester</li>
-            <li>DevSecOps & Développement : HTML5, CSS3, JS, PHP, SQL, Python</li>
-            <li>Infrastructure & Réseaux : DHCP, firewall, DNS, Active Directory, SIEM, IPS, IDS, proxy</li>
-            <li>Virtualisation : VMware, VirtualBox, Proxmox</li>
-        </ul>
+      <h2>À propos</h2>
+      <p>
+        Étudiant à la Guardia Cybersecurity School, spécialisé dans les tests de pénétration, la sécurité web et la gestion d’incidents.
+        Performant en compétition (4ᵉ place WorldSkills Cloud 2024, 2ᵉ place GCTF), je développe régulièrement des projets personnels.
+      </p>
     </section>
 
     <section id="experience">
-        <h2>Expériences professionnelles</h2>
-        <ul>
-            <li>
-                <strong>AX'IOM</strong> – Pentester / Auditeur cybersécurité<br/>
-                <em>Mai 2025 – Présent | Vaulx-en-Velin, Auvergne-Rhône-Alpes, France</em><br/>
-                Missions d’audit et tests d’intrusion en entreprise.
-            </li>
-            <li>
-                <strong>Ministère des Armées</strong> – Préparation Militaire Terre (PMT)<br/>
-                <em>Février 2024 | Djibouti</em><br/>
-                Stage militaire avec formation tactique, cohésion d'équipe, discipline et gestion du stress.
-            </li>
-            <li>
-                <strong>CTF Player</strong> – Équipe Error_418<br/>
-                <em>Compétitions régionales et internationales</em><br/>
-                2ème place au GCTF (cybersécurité).
-            </li>
-        </ul>
+      <h2>Expériences professionnelles</h2>
+      <article>
+        <h3>AX'IOM - Pentester / Auditeur cybersécurité</h3>
+        <time>mai 2025 - Présent</time>
+        <p>Vaulx-en-Velin, Auvergne-Rhône-Alpes, France</p>
+        <p>Audit et test d’intrusion pour clients divers, analyse de vulnérabilités, rapports détaillés.</p>
+      </article>
+      <article>
+        <h3>Ministère des Armées - Préparation militaire terre (PMT)</h3>
+        <time>février 2024</time>
+        <p>Djibouti</p>
+        <p>Stage militaire de 5 jours incluant missions terrain, exercices physiques et formation théorique.</p>
+      </article>
     </section>
 
     <section id="education">
-        <h2>Formations</h2>
-        <ul>
-            <li>
-                <strong>Guardia Cybersecurity School</strong><br/>
-                Bachelor en Cybersécurité (2024 – 2027)
-            </li>
-            <li>
-                <strong>Lycée Français de Djibouti</strong><br/>
-                Baccalauréat général (Math, Physique, SVT) (2021 – 2024)
-            </li>
-            <li>
-                <strong>Collège Paul Emile Victor</strong><br/>
-                Brevet initiation aéronautique et Diplôme national du brevet (2018 – 2021)
-            </li>
-        </ul>
+      <h2>Formations</h2>
+      <article>
+        <h3>Guardia Cybersecurity School</h3>
+        <time>2024 - 2027</time>
+        <p>Bachelor en cybersécurité</p>
+      </article>
+      <article>
+        <h3>Lycée Français de Djibouti</h3>
+        <time>2021 - 2024</time>
+        <p>Baccalauréat général, spécialités Math, Physique, SVT</p>
+      </article>
+      <article>
+        <h3>Collège Paul Emile Victor</h3>
+        <time>2018 - 2021</time>
+        <p>Diplôme national du brevet - Initiation aéronautique</p>
+      </article>
     </section>
 
-    <section id="certifications">
-        <h2>Certifications</h2>
-        <ul>
-            <li>SensCyber</li>
-            <li>SC-200 : Configurer votre environnement Microsoft Sentinel</li>
-            <li>Defend against cyberthreats with Microsoft Defender XDR</li>
-            <li>Cyber Threat Management</li>
-            <li>Recon for pentester</li>
-        </ul>
+    <section id="skills">
+      <h2>Compétences</h2>
+      <ul class="skills-list">
+        <li>Leadership</li>
+        <li>Discipline</li>
+        <li>Gestion du stress</li>
+        <li>Burp Suite</li>
+        <li>SQL Injection</li>
+        <li>TryHackMe (Top 2%)</li>
+        <li>OSINT (Google Dorks, Shodan...)</li>
+        <li>DevSecOps & développement (HTML5, CSS3, JS, PHP, Python)</li>
+        <li>Infrastructure (DHCP, firewall, SIEM, Nginx, VMware...)</li>
+        <li>Multilingue : Français (natif), Anglais (pro), Espagnol (basique)</li>
+      </ul>
     </section>
 
     <section id="projects">
-        <h2>Projets & Performances</h2>
-        <ul>
-            <li>2ème place au GCTF, compétition de cybersécurité (avec équipe Error_418)</li>
-            <li>4ème place aux WorldSkills Cloud régionaux 2024</li>
-            <li>Projets personnels réguliers en pentesting et DevSecOps</li>
-        </ul>
+      <h2>Projets</h2>
+      <article>
+        <h3>Participation au GCTF</h3>
+        <p>2ᵉ place au GCTF, compétition de cybersécurité majeure.</p>
+      </article>
+      <article>
+        <h3>Plateformes de pratique</h3>
+        <p>
+          <a href="https://linkedin.com/in/erwann-dumas-96643132b" target="_blank" rel="noopener">LinkedIn</a> - Formations & actualités.<br />
+          <a href="https://github.com/erwann-dms" target="_blank" rel="noopener">GitHub</a> - Projets réalisés.<br />
+          <a href="https://tryhackme.com/p/Shrekye" target="_blank" rel="noopener">TryHackMe</a> - Top 2%.<br />
+          <a href="https://www.root-me.org/Shrekye" target="_blank" rel="noopener">Root-Me</a> - Classé 2200ᵉ.
+        </p>
+      </article>
     </section>
 
     <section id="contact">
-        <h2>Contact</h2>
-        <p>Vous pouvez me contacter via :</p>
-        <ul>
-            <li><a href="https://linkedin.com/in/erwann-dumas-96643132b" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-            <li><a href="https://github.com/erwann-dms" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-            <li><a href="https://tryhackme.com/p/Shrekye" target="_blank" rel="noopener noreferrer">TryHackMe (Top 2%)</a></li>
-            <li><a href="https://www.root-me.org/Shrekye" target="_blank" rel="noopener noreferrer">Root-Me (classé 2200ᵉ)</a></li>
-        </ul>
+      <h2>Contact</h2>
+      <p>Vous pouvez me contacter via :</p>
+      <ul class="contact-list">
+        <li><a href="https://linkedin.com/in/erwann-dumas-96643132b" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://github.com/erwann-dms" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
     </section>
-</main>
+  </main>
 
-<footer>
-    <p>&copy; 2025 Erwann Dumas - Tous droits réservés.</p>
-</footer>
+  <footer>
+    <p>&copy; 2025 Erwann Dumas. Tous droits réservés.</p>
+  </footer>
+
+  <script>
+    // Simple script pour activer le lien actif dans la nav au scroll
+    const sections = document.querySelectorAll('main section');
+    const navLinks = document.querySelectorAll('nav ul li a');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 80;
+        if (pageYOffset >= sectionTop) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
+
 </body>
 </html>
