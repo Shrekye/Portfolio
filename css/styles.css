@@ -6,7 +6,6 @@
   --card-bg: #ffffff;
   --shadow: rgba(0, 0, 0, 0.05);
 }
-
 body.dark-theme {
   --bg: #0d0d0d;
   --fg: #f1f1f1;
@@ -15,19 +14,16 @@ body.dark-theme {
   --card-bg: #1a1a1a;
   --shadow: rgba(0, 0, 0, 0.3);
 }
-
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-
 body {
   font-family: 'Outfit', sans-serif;
   background-color: var(--bg);
   color: var(--fg);
   line-height: 1.6;
-  transition: background-color 0.4s, color 0.4s;
 }
 
 .container {
@@ -35,7 +31,6 @@ body {
   margin: auto;
   padding: 2rem;
 }
-
 .navbar {
   background: var(--card-bg);
   padding: 1rem 0;
@@ -43,46 +38,42 @@ body {
   top: 0;
   z-index: 100;
 }
-
 .navbar .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
 .logo {
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--accent);
 }
-
 .logo span {
   color: var(--fg);
 }
-
 .nav-links {
   list-style: none;
   display: flex;
   gap: 1.2rem;
 }
-
 .nav-links a {
   color: var(--fg);
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s;
 }
-
 .nav-links a:hover {
   color: var(--accent);
 }
 
 .hero {
-  background: linear-gradient(to bottom, #e9f3f1, #d6eeea);
-  color: var(--fg);
-}
-body.dark-theme .hero {
   background: url('../assets/images/bg.jpg') center/cover no-repeat;
+  position: relative;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .hero .overlay {
@@ -90,22 +81,18 @@ body.dark-theme .hero {
   inset: 0;
   background-color: rgba(0, 0, 0, 0.6);
 }
-
 .hero-content {
   position: relative;
   color: white;
 }
-
 .hero h1 {
   font-size: 3rem;
   margin-bottom: 0.5rem;
 }
-
 .hero p {
   font-size: 1.2rem;
   margin-bottom: 1.5rem;
 }
-
 .btn {
   padding: 0.7rem 1.5rem;
   background: var(--accent);
@@ -116,61 +103,49 @@ body.dark-theme .hero {
   text-decoration: none;
   transition: background 0.3s;
 }
-
 .btn:hover {
   background: var(--accent-dark);
 }
-
 .section {
   padding: 4rem 2rem;
 }
-
 .section h2 {
   text-align: center;
   margin-bottom: 2rem;
   font-size: 2rem;
   color: var(--accent);
 }
-
 .section.dark {
   background-color: #121212;
 }
-
 .card {
   background: var(--card-bg);
   padding: 1.5rem;
   border-radius: 12px;
   margin-bottom: 2rem;
 }
-
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1.5rem;
 }
-
 .timeline .event {
   margin-bottom: 2rem;
 }
-
 .timeline .event h3 {
   color: var(--accent);
 }
-
 .timeline .event span {
   font-size: 0.9rem;
   opacity: 0.7;
 }
-
 .about-details {
   list-style: none;
   margin-top: 1rem;
 }
-
 .about-details li {
   margin: 0.3rem 0;
 }
-
 .socials {
   display: flex;
   flex-wrap: wrap;
@@ -178,7 +153,6 @@ body.dark-theme .hero {
   justify-content: center;
   margin-top: 1rem;
 }
-
 footer {
   text-align: center;
   padding: 2rem 1rem;
@@ -187,23 +161,23 @@ footer {
 }
 
 #theme-toggle {
-  background: var(--accent);
-  color: var(--fg);
-  border: none;
-  padding: 0.5rem 1rem;
-  font-weight: bold;
-  border-radius: 30px;
-  cursor: pointer;
   position: absolute;
   top: 1rem;
   right: 1.5rem;
-  transition: background 0.3s, color 0.3s;
+  z-index: 1000;
+  background: var(--accent);
+  color: black;
+  border: none;
+  border-radius: 30px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s;
 }
 
 #theme-toggle:hover {
   background: var(--accent-dark);
 }
-
 
 .card, .section {
   box-shadow: 0 4px 20px var(--shadow);
