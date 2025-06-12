@@ -7,6 +7,13 @@
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  <script>
+    const toggleBtn = document.getElementById("theme-toggle");
+    toggleBtn.addEventListener("click", () => {
+      document.documentElement.classList.toggle("light-mode");
+    });
+  </script>
+
 </head>
 <body>
   <nav class="navbar">
@@ -18,6 +25,7 @@
         <li><a href="#experience">Expériences</a></li>
         <li><a href="#projects">Formations</a></li>
         <li><a href="#contact">Contact</a></li>
+        <button id="theme-toggle" aria-label="Changer de thème">🌓</button>
       </ul>
     </div>
   </nav>
