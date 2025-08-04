@@ -35,6 +35,7 @@ body {
   padding: 2rem;
 }
 
+/* Navbar */
 .navbar {
   background: var(--card-bg);
   padding: 1rem 0;
@@ -212,10 +213,9 @@ footer {
 }
 
 /* Media Queries for Responsiveness */
-/* Pour mobiles et tablettes */
 @media (max-width: 768px) {
   .navbar {
-    padding: 0.5rem 0; /* Réduit la taille de la navbar */
+    padding: 0.5rem 0;
   }
 
   .navbar .container {
@@ -224,12 +224,12 @@ footer {
   }
 
   .logo {
-    font-size: 1.3rem; /* Réduit la taille du logo */
+    font-size: 1.3rem;
     margin-bottom: 1rem;
   }
 
   .nav-links {
-    display: none; /* Cacher la navigation par défaut sur mobile */
+    display: none;
     width: 100%;
     flex-direction: column;
     text-align: center;
@@ -243,11 +243,10 @@ footer {
   }
 
   .navbar.open .nav-links {
-    display: block; /* Affiche le menu quand la navbar a la classe 'open' */
+    display: block;
   }
 }
 
-/* Pour petits écrans (mobiles) */
 @media (max-width: 480px) {
   .hero h1 {
     font-size: 1.8rem;
@@ -267,12 +266,12 @@ footer {
   }
 
   .navbar {
-    position: fixed; /* Fixe la navbar en haut de l'écran */
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 100;
-    transition: top 0.3s ease-in-out; /* Transition pour le défilement */
+    transition: top 0.3s ease-in-out;
   }
 
   .navbar .container {

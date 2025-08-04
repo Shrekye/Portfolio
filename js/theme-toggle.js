@@ -1,46 +1,37 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // 1. Gestion du thème
   const toggleBtn = document.getElementById("theme-toggle");
-  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  const currentTheme = localStorage.getItem("theme") || (prefersDark ? "dark" : "light");
+  const body = document.body;
 
-  setTheme(currentTheme);
+  if (localStorage.getItem("theme") === "dark") {
+    body.classList.add("dark-theme");
+  }
 
   toggleBtn.addEventListener("click", () => {
-    const newTheme = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
-    setTheme(newTheme);
+    body.classList.toggle("dark-theme");
+    localStorage.setItem("theme", body.classList.contains("dark-theme") ? "dark" : "light");
   });
 
-  function setTheme(theme) {
-    if (theme === "dark") {
-      document.documentElement.setAttribute("data-theme", "dark");
-      toggleBtn.textContent = "☀️";
-    } else {
-      document.documentElement.setAttribute("data-theme", "light");
-      toggleBtn.textContent = "🌙";
-    }
-    localStorage.setItem("theme", theme);
-  }
-});
-
+  // 2. Gérer la navbar qui se cache lors du défilement
   let lastScrollTop = 0;
-  const navbar = document.querySelector('.navbar');
-  
-  // Ajouter un écouteur d'événements de défilement
-  window.addEventListener('scroll', function () {
+  const navbar = document.querySelector(".navbar");
+
+  window.addEventListener("scroll", () => {
     let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-    
-    // Si l'utilisateur défile vers le bas
+
+    // Si l'utilisateur défile vers le bas, cacher la navbar
     if (currentScroll > lastScrollTop) {
-      navbar.style.top = "-80px"; // Masquer la navbar
+      navbar.classList.add("hidden");
     } else {
-      navbar.style.top = "0"; // Réafficher la navbar
+      navbar.classList.remove("hidden");
     }
-    
-    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Pour éviter les valeurs négatives
+
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
   });
 
-  // Fonction pour ouvrir/fermer le menu de navigation mobile
-  const menuToggle = document.querySelector('#menu-toggle');
-  menuToggle.addEventListener('click', () => {
-    navbar.classList.toggle('open');
+  // 3. Gérer l'ouverture/fermeture du menu mobile
+  const menuToggle = document.getElementById("menu-toggle");
+  menuToggle.addEventListener("click", () => {
+    navbar.classList.toggle("open");
   });
+});

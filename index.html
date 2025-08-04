@@ -9,9 +9,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Navbar -->
   <nav class="navbar">
     <div class="container">
       <div class="logo">Erwann<span>Dumas</span></div>
+
+      <!-- Bouton hamburger pour mobile -->
+      <button id="menu-toggle" class="menu-toggle" aria-label="Menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <!-- Liens de navigation -->
       <ul class="nav-links">
         <li><a href="#about">À propos</a></li>
         <li><a href="#skills">Compétences</a></li>
@@ -23,6 +33,7 @@
     </div>
   </nav>
 
+  <!-- Hero Section -->
   <header class="hero">
     <div class="overlay"></div>
     <div class="hero-content">
@@ -32,6 +43,7 @@
     </div>
   </header>
 
+  <!-- About Section -->
   <section id="about" class="section">
     <div class="container">
       <h2>À propos</h2>
@@ -44,6 +56,7 @@
     </div>
   </section>
 
+  <!-- Skills Section -->
   <section id="skills" class="section dark">
     <div class="container">
       <h2>Compétences</h2>
@@ -60,6 +73,7 @@
     </div>
   </section>
 
+  <!-- Experience Section -->
   <section id="experience" class="section">
     <div class="container">
       <h2>Expériences</h2>
@@ -87,70 +101,7 @@
     </div>
   </section>
 
-  <section id="projects" class="section dark">
-    <div class="container">
-      <h2>Formations & Certifications</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Formations</h3>
-          <ul>
-            <li>Bachelor Cybersécurité – Guardia (2024–2027)</li>
-            <li>PSC1 – Lycée Français de Djibouti</li>
-            <li>BIA – Collège Paul Émile Victor, Vidauban</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Certifications</h3>
-          <ul>
-            <li>+9 formations Cisco (Ethical Hacker, Network Technician…)</li>
-            <li>Google Cybersecurity Professional</li>
-            <li>ISC2 CC (Certified in Cybersecurity, self passed)</li>
-            <li>Microsoft (SC-200, Defender XDR…)</li>
-            <li>MOOC, OpenClassroom, Udemy (x3+ de chaque)</li>
-            <li>SensCyber, Cyber Threat Management</li>
-            <li>Recon for Pentester</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-<section id="github" class="section">
-    <div class="container">
-      <h2>Projets GitHub</h2>
-      <p>Voici quelques-uns de mes projets disponibles sur GitHub :</p>
-      <div class="grid">
-        <a href="https://github.com/erwann-dms/Offensive-first-lab" target="_blank">
-          <div class="card">
-            <h3>Offensive-first-lab</h3>
-            <li> – Lab Python dockerisé, orienté Pentesting.</li>
-          </div>
-        </a>
-        <a href="https://github.com/erwann-dms/Localphish" target="_blank">
-          <div class="card">
-            <h3>Localphish</h3>
-            <li> – Outil de phishing local en Python.</li>
-          </div>
-        </a>
-      </div>
-      <div class="grid">
-        <a href="https://github.com/erwann-dms/IDS-Mail-python" target="_blank">
-          <div class="card">
-            <h3>IDS-Mail-python</h3>
-            <li> – Projet pour détecter des menaces dans les emails.</li>
-          </div>
-        </a>
-        <a href="https://github.com/erwann-dms/Portfolio" target="_blank">
-          <div class="card">
-            <h3>Portfolio</h3>
-            <li> – Ce site web en HTML/CSS.</li>
-          </div>
-        </a>
-      </div>
-      <p>Et d'autres projets à découvrir sur mon profil GitHub (10 dépôts publics) et tant de privés qui n'attendent que de sortir...</p>
-    </div>
-  </section>
-
+  <!-- Contact Section -->
   <section id="contact" class="section">
     <div class="container">
       <h2>Contact</h2>
@@ -168,18 +119,6 @@
     <p>© 2025 Erwann Dumas — Tous droits réservés.</p>
   </footer>
 
-  <script>
-    const toggle = document.getElementById('theme-toggle');
-    const body = document.body;
-
-    if (localStorage.getItem('theme') === 'dark') {
-      body.classList.add('dark-theme');
-    }
-
-    toggle.addEventListener('click', () => {
-      body.classList.toggle('dark-theme');
-      localStorage.setItem('theme', body.classList.contains('dark-theme') ? 'dark' : 'light');
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
