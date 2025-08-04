@@ -89,7 +89,7 @@ body {
 .hero .overlay {
   position: absolute;
   inset: 0;
-  background-color: var(--shadow);
+  background-color: var(--accent-dark);
 }
 
 .hero-content {
