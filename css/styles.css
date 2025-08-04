@@ -6,6 +6,7 @@
   --card-bg: #ffffff;
   --shadow: rgba(0, 0, 0, 0.05);
 }
+
 body.dark-theme {
   --bg: #0d0d0d;
   --fg: #f1f1f1;
@@ -14,11 +15,13 @@ body.dark-theme {
   --card-bg: #1a1a1a;
   --shadow: rgba(0, 0, 0, 0.3);
 }
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+
 body {
   font-family: 'Outfit', sans-serif;
   background-color: var(--bg);
@@ -31,6 +34,7 @@ body {
   margin: auto;
   padding: 2rem;
 }
+
 .navbar {
   background: var(--card-bg);
   padding: 1rem 0;
@@ -38,30 +42,36 @@ body {
   top: 0;
   z-index: 100;
 }
+
 .navbar .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .logo {
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--accent);
 }
+
 .logo span {
   color: var(--fg);
 }
+
 .nav-links {
   list-style: none;
   display: flex;
   gap: 1.2rem;
 }
+
 .nav-links a {
   color: var(--fg);
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s;
 }
+
 .nav-links a:hover {
   color: var(--accent);
 }
@@ -81,18 +91,22 @@ body {
   inset: 0;
   background-color: rgba(0, 0, 0, 0.6);
 }
+
 .hero-content {
   position: relative;
   color: white;
 }
+
 .hero h1 {
   font-size: 3rem;
   margin-bottom: 0.5rem;
 }
+
 .hero p {
   font-size: 1.2rem;
   margin-bottom: 1.5rem;
 }
+
 .btn {
   padding: 0.7rem 1.5rem;
   background: var(--accent);
@@ -103,49 +117,61 @@ body {
   text-decoration: none;
   transition: background 0.3s;
 }
+
 .btn:hover {
   background: var(--accent-dark);
 }
+
 .section {
   padding: 4rem 2rem;
 }
+
 .section h2 {
   text-align: center;
   margin-bottom: 2rem;
   font-size: 2rem;
   color: var(--accent);
 }
+
 .section.dark {
   background-color: #121212;
 }
+
 .card {
   background: var(--card-bg);
   padding: 1.5rem;
   border-radius: 12px;
   margin-bottom: 2rem;
 }
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1.5rem;
 }
+
 .timeline .event {
   margin-bottom: 2rem;
 }
+
 .timeline .event h3 {
   color: var(--accent);
 }
+
 .timeline .event span {
   font-size: 0.9rem;
   opacity: 0.7;
 }
+
 .about-details {
   list-style: none;
   margin-top: 1rem;
 }
+
 .about-details li {
   margin: 0.3rem 0;
 }
+
 .socials {
   display: flex;
   flex-wrap: wrap;
@@ -153,6 +179,7 @@ body {
   justify-content: center;
   margin-top: 1rem;
 }
+
 footer {
   text-align: center;
   padding: 2rem 1rem;
@@ -182,4 +209,92 @@ footer {
 .card, .section {
   box-shadow: 0 4px 20px var(--shadow);
   border-radius: 12px;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For Tablets */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .navbar .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar .container .logo {
+    margin-bottom: 1rem;
+  }
+
+  .navbar .container .nav-links {
+    display: block;
+  }
+
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .section {
+    padding: 3rem 1.5rem;
+  }
+}
+
+/* For Mobile Phones */
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero-content {
+    padding: 0 1rem;
+  }
+
+  .btn {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+
+  .navbar .container {
+    flex-direction: column;
+    padding: 1rem 0;
+  }
+
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-links a {
+    padding: 1rem 0;
+    width: 100%;
+    display: block;
+  }
+
+  .nav-links.open {
+    display: block;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 2.5rem 1rem;
+  }
 }
