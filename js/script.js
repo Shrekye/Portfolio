@@ -43,30 +43,39 @@ function resizeCanvas() {
   canvas.width = window.innerWidth;
   canvas.height = document.querySelector('.hero').offsetHeight;
 }
-
 resizeCanvas();
 window.addEventListener('resize', resizeCanvas);
 
-const letters = '01';
-const fontSize = 14;
+// Génère des colonnes de chiffres
+const fontSize = 16;
 const columns = Math.floor(window.innerWidth / fontSize);
-const drops = Array(columns).fill(1);
+let drops = Array(columns).fill(1);
+
+// Fonction pour convertir une couleur hexadécimale en rgba
+function hexToRgba(hex, alpha = 1) {
+  hex = hex.replace("#", "");
+  const r = parseInt(hex.slice(0, 2), 16);
+  const g = parseInt(hex.slice(2, 4), 16);
+  const b = parseInt(hex.slice(4, 6), 16);
+  return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+}
 
 function drawMatrix() {
-  ctx.fillStyle = 'rgba(255, 255, 255, 0.05)';
+  const bgColor = getComputedStyle(document.documentElement).getPropertyValue('--bg').trim();
+  const digitColor = getComputedStyle(document.documentElement).getPropertyValue('--accent-dark').trim();
+
+  ctx.fillStyle = hexToRgba(bgColor, 0.1);
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-  const accentDark = getComputedStyle(document.documentElement).getPropertyValue('--accent-dark').trim();
-
-  ctx.fillStyle = accentDark;
-  ctx.font = fontSize + 'px monospace';
+  ctx.fillStyle = digitColor;
+  ctx.font = `${fontSize}px monospace`;
 
   for (let i = 0; i < drops.length; i++) {
-    const text = letters[Math.floor(Math.random() * letters.length)];
+    const char = Math.random() > 0.5 ? '0' : '1';
     const x = i * fontSize;
     const y = drops[i] * fontSize;
 
-    ctx.fillText(text, x, y);
+    ctx.fillText(char, x, y);
 
     if (y > canvas.height && Math.random() > 0.975) {
       drops[i] = 0;
@@ -77,3 +86,9 @@ function drawMatrix() {
 }
 
 setInterval(drawMatrix, 50);
+
+document.getElementById('theme-toggle').addEventListener('click', () => {
+  setTimeout(() => {
+    drops = Array(columns).fill(1); // reset
+  }, 150);
+});
