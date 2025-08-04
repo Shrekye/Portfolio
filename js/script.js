@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // 1. Gestion du thème
   const toggleBtn = document.getElementById("theme-toggle");
   const body = document.body;
 
@@ -12,14 +11,12 @@ document.addEventListener("DOMContentLoaded", () => {
     localStorage.setItem("theme", body.classList.contains("dark-theme") ? "dark" : "light");
   });
 
-  // 2. Gérer la navbar qui se cache lors du défilement
   let lastScrollTop = 0;
   const navbar = document.querySelector(".navbar");
 
   window.addEventListener("scroll", () => {
     let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
-    // Si l'utilisateur défile vers le bas, cacher la navbar
     if (currentScroll > lastScrollTop) {
       navbar.classList.add("hidden");
     } else {
@@ -29,7 +26,6 @@ document.addEventListener("DOMContentLoaded", () => {
     lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
   });
 
-  // 3. Gérer l'ouverture/fermeture du menu mobile
   const menuToggle = document.getElementById("menu-toggle");
   menuToggle.addEventListener("click", () => {
     navbar.classList.toggle("open");
@@ -46,12 +42,10 @@ function resizeCanvas() {
 resizeCanvas();
 window.addEventListener('resize', resizeCanvas);
 
-// Génère des colonnes de chiffres
 const fontSize = 16;
 const columns = Math.floor(window.innerWidth / fontSize);
 let drops = Array(columns).fill(1);
 
-// Fonction pour convertir une couleur hexadécimale en rgba
 function hexToRgba(hex, alpha = 1) {
   hex = hex.replace("#", "");
   const r = parseInt(hex.slice(0, 2), 16);
@@ -89,6 +83,6 @@ setInterval(drawMatrix, 50);
 
 document.getElementById('theme-toggle').addEventListener('click', () => {
   setTimeout(() => {
-    drops = Array(columns).fill(1); // reset
+    drops = Array(columns).fill(1);
   }, 150);
 });
