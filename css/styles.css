@@ -214,7 +214,7 @@ footer {
 
 /* Hamburger Menu Button */
 #menu-toggle {
-  display: flex;
+  display: none; /* Cacher par défaut */
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
@@ -234,18 +234,19 @@ footer {
   transition: all 0.3s ease-in-out;
 }
 
+/* Transformation pour faire une vraie croix */
 .navbar.open #menu-toggle .bar:nth-child(1) {
-  transform: rotate(45deg);
+  transform: rotate(45deg); /* La première barre se tourne de 45° */
   position: relative;
   top: 7px;
 }
 
 .navbar.open #menu-toggle .bar:nth-child(2) {
-  opacity: 0;
+  opacity: 0; /* La barre du milieu disparaît */
 }
 
 .navbar.open #menu-toggle .bar:nth-child(3) {
-  transform: rotate(-45deg);
+  transform: rotate(-45deg); /* La troisième barre se tourne de -45° */
   position: relative;
   top: -7px;
 }
@@ -287,6 +288,11 @@ footer {
 
   .navbar.open .nav-links {
     display: block;
+  }
+
+  /* Afficher le bouton hamburger uniquement pour les écrans de taille tablette et inférieure */
+  #menu-toggle {
+    display: flex;
   }
 }
 
