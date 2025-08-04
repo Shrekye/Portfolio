@@ -212,19 +212,10 @@ footer {
 }
 
 /* Media Queries for Responsiveness */
-
-/* For Tablets */
+/* Pour mobiles et tablettes */
 @media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2.5rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-
-  .nav-links {
-    display: none;
+  .navbar {
+    padding: 0.5rem 0; /* Réduit la taille de la navbar */
   }
 
   .navbar .container {
@@ -232,24 +223,31 @@ footer {
     align-items: flex-start;
   }
 
-  .navbar .container .logo {
+  .logo {
+    font-size: 1.3rem; /* Réduit la taille du logo */
     margin-bottom: 1rem;
   }
 
-  .navbar .container .nav-links {
-    display: block;
+  .nav-links {
+    display: none; /* Cacher la navigation par défaut sur mobile */
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
   }
 
-  .grid {
-    grid-template-columns: 1fr 1fr;
+  .nav-links a {
+    padding: 1rem;
+    width: 100%;
+    font-size: 1rem;
   }
 
-  .section {
-    padding: 3rem 1.5rem;
+  .navbar.open .nav-links {
+    display: block; /* Affiche le menu quand la navbar a la classe 'open' */
   }
 }
 
-/* For Mobile Phones */
+/* Pour petits écrans (mobiles) */
 @media (max-width: 480px) {
   .hero h1 {
     font-size: 1.8rem;
@@ -268,33 +266,22 @@ footer {
     font-size: 1rem;
   }
 
-  .navbar .container {
-    flex-direction: column;
-    padding: 1rem 0;
+  .navbar {
+    position: fixed; /* Fixe la navbar en haut de l'écran */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    transition: top 0.3s ease-in-out; /* Transition pour le défilement */
   }
 
-  .nav-links {
-    display: none;
-    width: 100%;
+  .navbar .container {
     flex-direction: column;
-    text-align: center;
+    padding: 0.5rem;
   }
 
   .nav-links a {
-    padding: 1rem 0;
+    padding: 1rem;
     width: 100%;
-    display: block;
-  }
-
-  .nav-links.open {
-    display: block;
-  }
-
-  .grid {
-    grid-template-columns: 1fr;
-  }
-
-  .section {
-    padding: 2.5rem 1rem;
   }
 }
