@@ -1,10 +1,10 @@
 :root {
-  --bg: #f7f8fa;
-  --fg: #1e1e1e;
-  --accent: #00bfa6;
-  --accent-dark: #009e89;
-  --card-bg: #ffffff;
-  --shadow: rgba(0, 0, 0, 0.05);
+  --bg: #ffffff;             /* Fond global blanc */
+  --fg: #1e1e1e;             /* Texte principal noir/gris foncé */
+  --accent: #c62828;         /* Rouge principal (extrait du CV) */
+  --accent-dark: #8e0000;    /* Rouge foncé pour les survols, boutons */
+  --card-bg: #f5f5f5;        /* Fond des sections ou encadrés */
+  --shadow: rgba(0, 0, 0, 0.05); /* Légère ombre pour les cartes */
 }
 
 body.dark-theme {
