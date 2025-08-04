@@ -35,7 +35,6 @@ body {
   padding: 2rem;
 }
 
-/* Navbar */
 .navbar {
   background: var(--card-bg);
   padding: 1rem 0;
@@ -90,7 +89,7 @@ body {
 .hero .overlay {
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: #3c3c3c;
 }
 
 .hero-content {
