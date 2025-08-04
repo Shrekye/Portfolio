@@ -212,6 +212,49 @@ footer {
   border-radius: 12px;
 }
 
+/* Hamburger Menu Button */
+#menu-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 30px;
+  height: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.bar {
+  width: 30px;
+  height: 4px;
+  background-color: var(--fg); /* Couleur des barres */
+  border-radius: 2px;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar.open #menu-toggle .bar:nth-child(1) {
+  transform: rotate(45deg);
+  position: relative;
+  top: 7px;
+}
+
+.navbar.open #menu-toggle .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar.open #menu-toggle .bar:nth-child(3) {
+  transform: rotate(-45deg);
+  position: relative;
+  top: -7px;
+}
+
+/* Effet au survol */
+#menu-toggle:hover .bar {
+  background-color: var(--accent); /* Changer la couleur lors du survol */
+}
+
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
   .navbar {
