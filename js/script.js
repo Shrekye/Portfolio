@@ -4,14 +4,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (localStorage.getItem("theme") === "dark") {
     body.classList.add("dark-theme");
+    currentColors = darkColors;
+  } else {
+    currentColors = lightColors;
   }
 
   toggleBtn.addEventListener("click", () => {
     body.classList.toggle("dark-theme");
     localStorage.setItem("theme", body.classList.contains("dark-theme") ? "dark" : "light");
     updateCanvasColors();
-    drawMatrix();
   });
+
 
   let lastScrollTop = 0;
   const navbar = document.querySelector(".navbar");
@@ -51,7 +54,7 @@ const darkColors = {
   accentDark: '#00c2a2'     
 };
 
-let currentColors = lightColors;
+let currentColors = localStorage.getItem("theme") === "dark" ? darkColors : lightColors;
 
 function resizeCanvas() {
   canvas.width = window.innerWidth;
