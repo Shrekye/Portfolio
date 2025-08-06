@@ -2,19 +2,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const toggleBtn = document.getElementById("theme-toggle");
   const body = document.body;
 
-  // Applique le thème si un choix a été sauvegardé dans localStorage
   if (localStorage.getItem("theme") === "dark") {
     body.classList.add("dark-theme");
   }
 
-  // Change de thème au clic et sauvegarde la préférence dans localStorage
   toggleBtn.addEventListener("click", () => {
     body.classList.toggle("dark-theme");
     localStorage.setItem("theme", body.classList.contains("dark-theme") ? "dark" : "light");
-
-    // Redessine le canvas après le changement de thème
-    drawMatrix();
-  });
+    
+    updateCanvasColors();
+    drawMatrix(); 
+  }); 
 
   let lastScrollTop = 0;
   const navbar = document.querySelector(".navbar");
@@ -37,7 +35,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Canvas
 const canvas = document.getElementById('matrix-canvas');
 const ctx = canvas.getContext('2d');
 
@@ -45,7 +42,18 @@ let fontSize = 16;
 let columns;
 let drops = [];
 
-// Redimensionne le canvas en fonction de la taille de la fenêtre
+const lightColors = {
+  bgColor: '#ffffff',       
+  accentDark: '#660140'    
+};
+
+const darkColors = {
+  bgColor: '#0d0d0d',       
+  accentDark: '#00c2a2'     
+};
+
+let currentColors = lightColors;  
+
 function resizeCanvas() {
   canvas.width = window.innerWidth;
   canvas.height = document.querySelector('.hero').offsetHeight;
@@ -55,7 +63,6 @@ function resizeCanvas() {
 resizeCanvas();
 window.addEventListener('resize', resizeCanvas);
 
-// Convertir une couleur HEX CSS en rgba
 function hexToRgba(hex, alpha = 1) {
   hex = hex.replace('#', '');
   if (hex.length === 3) {
@@ -67,11 +74,17 @@ function hexToRgba(hex, alpha = 1) {
   return `rgba(${r}, ${g}, ${b}, ${alpha})`;
 }
 
-// Dessiner la matrice sur le canvas
+function updateCanvasColors() {
+  if (document.body.classList.contains('dark-theme')) {
+    currentColors = darkColors;  
+  } else {
+    currentColors = lightColors; 
+  }
+}
+
 function drawMatrix() {
-  const styles = getComputedStyle(document.documentElement);
-  const bgColor = styles.getPropertyValue('--bg').trim();
-  const accentDark = styles.getPropertyValue('--accent-dark').trim();
+  const bgColor = currentColors.bgColor;
+  const accentDark = currentColors.accentDark;
 
   ctx.fillStyle = hexToRgba(bgColor, 0.1);
   ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -86,7 +99,6 @@ function drawMatrix() {
 
     ctx.fillText(text, x, y);
 
-    // Redémarre certaines gouttes
     if (y > canvas.height && Math.random() > 0.975) {
       drops[i] = 0;
     }
@@ -97,5 +109,4 @@ function drawMatrix() {
   requestAnimationFrame(drawMatrix);
 }
 
-// Lancer le dessin initial du canvas
 drawMatrix();
