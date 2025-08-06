@@ -2,13 +2,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const toggleBtn = document.getElementById("theme-toggle");
   const body = document.body;
 
+  // Applique le thème si un choix a été sauvegardé dans localStorage
   if (localStorage.getItem("theme") === "dark") {
     body.classList.add("dark-theme");
   }
 
+  // Change de thème au clic et sauvegarde la préférence dans localStorage
   toggleBtn.addEventListener("click", () => {
     body.classList.toggle("dark-theme");
     localStorage.setItem("theme", body.classList.contains("dark-theme") ? "dark" : "light");
+
+    // Redessine le canvas après le changement de thème
+    drawMatrix();
   });
 
   let lastScrollTop = 0;
@@ -32,6 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// Canvas
 const canvas = document.getElementById('matrix-canvas');
 const ctx = canvas.getContext('2d');
 
@@ -39,6 +45,7 @@ let fontSize = 16;
 let columns;
 let drops = [];
 
+// Redimensionne le canvas en fonction de la taille de la fenêtre
 function resizeCanvas() {
   canvas.width = window.innerWidth;
   canvas.height = document.querySelector('.hero').offsetHeight;
@@ -48,7 +55,7 @@ function resizeCanvas() {
 resizeCanvas();
 window.addEventListener('resize', resizeCanvas);
 
-// Convertit une couleur HEX CSS en rgba
+// Convertir une couleur HEX CSS en rgba
 function hexToRgba(hex, alpha = 1) {
   hex = hex.replace('#', '');
   if (hex.length === 3) {
@@ -60,6 +67,7 @@ function hexToRgba(hex, alpha = 1) {
   return `rgba(${r}, ${g}, ${b}, ${alpha})`;
 }
 
+// Dessiner la matrice sur le canvas
 function drawMatrix() {
   const styles = getComputedStyle(document.documentElement);
   const bgColor = styles.getPropertyValue('--bg').trim();
@@ -89,4 +97,5 @@ function drawMatrix() {
   requestAnimationFrame(drawMatrix);
 }
 
+// Lancer le dessin initial du canvas
 drawMatrix();
