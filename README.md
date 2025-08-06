@@ -4,18 +4,13 @@
 
 Ce portfolio présente le parcours professionnel et académique d'Erwann Dumas, spécialisé en cybersécurité. Il inclut des sections sur ses expériences, formations, compétences, projets et moyens de contact.
 
-https://erwann-dms.github.io/Portfolio/
+https://Shrekye.github.io/Portfolio/
 
 ## Structure du projet
 
 - `index.html` : Page principale du portfolio.
 - `css/styles.css` : Fichier de styles personnalisés.
 - `assets/images/erwann-dumas.jpg` : Photo de profil.
-
-## Déploiement
-
-1. Clonez ce repository.
-2. Hébergez le dossier `erwann-portfolio` sur GitHub Pages ou tout autre service d'hébergement statique.
 
 ## Personnalisation
 
