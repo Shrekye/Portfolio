@@ -84,10 +84,7 @@ function updateCanvasColors() {
   }
 }
 
-function drawMatrix(currentTime) {
-  const deltaTime = currentTime - lastTime;
-  lastTime = currentTime;
-
+function drawMatrix() {
   const bgColor = currentColors.bgColor;
   const accentDark = currentColors.accentDark;
 
@@ -108,7 +105,7 @@ function drawMatrix(currentTime) {
       drops[i] = 0;
     }
 
-    drops[i] += dropSpeed * deltaTime / fontSize;
+    drops[i]++;
   }
 
   requestAnimationFrame(drawMatrix);
