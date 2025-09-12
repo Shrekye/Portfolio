@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Portfolio Cybersécurité - Terminal Futuriste</title>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo">Erwann<span>Dumas</span></div>
+      <button id="menu-toggle" class="menu-toggle" aria-label="Menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#about">À propos</a></li>
+        <li><a href="#skills">Compétences</a></li>
+        <li><a href="#experience">Expériences</a></li>
+        <li><a href="#projects">Formations</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="index.html">Home</a></li>
+        <button id="theme-toggle" aria-label="Changer de thème">🌓</button>
+      </ul>
+    </div>
+  </nav>
+  
+  <div class="terminal-container">
+    <div class="terminal">
+        <div class="glitch"></div>
+        <div class="scanline"></div>
+        <div class="output" id="output">
+            <p>Bienvenue dans le terminal. Tapez "help" pour voir les commandes disponibles.</p>
+        </div>
+        <div class="input-container">
+            <span>$ </span><input type="text" id="command-input" class="input" autofocus placeholder="Tapez une commande...">
+        </div>
+    </div>
+  </div>
+
+    <script>
+        const commands = {
+                'help': `Commandes disponible:
+                <ul>
+                    <li>ls projets</li>
+                    <li>cat about.txt</li>
+                    <li>ping me</li>
+                    <li>clear</li>
+                </ul>`,
+            'ls projets': '1. Projet Sécurisation Web\n2. Audits de sécurité\n3. Formation Cybersécurité',
+            'cat about.txt': 'Je suis un passionné de cybersécurité, expert en penetration testing et sécurisation des systèmes. Mon but est de rendre le monde numérique plus sûr.',
+            'ping me': 'Email: contact@cybersec.com\nLinkedIn: linkedin.com/in/monprofil',
+            'clear': ''
+        };
+
+        const output = document.getElementById('output');
+        const commandInput = document.getElementById('command-input');
+
+        function handleCommand(command) {
+            if (commands[command] !== undefined) {
+                if (command === 'clear') {
+                    output.innerHTML = 'Bienvenue dans le terminal. Tapez "help" pour voir les commandes disponibles.';  
+                } else {
+                    output.innerHTML += `<p>> ${commands[command]}</p>`;
+                }
+            } else {
+                output.innerHTML += `<p>> Commande inconnue. Tapez "help" pour les commandes disponibles.</p>`;
+            }
+            output.scrollTop = output.scrollHeight; 
+            commandInput.focus(); 
+        }
+
+        commandInput.addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                const command = commandInput.value.trim();
+                if (command !== '') {
+                    output.innerHTML += `<p>$ ${command}</p>`;
+                    handleCommand(command);
+                    commandInput.value = ''; 
+                }
+            }
+        });
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const toggleBtn = document.getElementById("theme-toggle");
+            const body = document.body;
+
+            if (localStorage.getItem("theme") === "dark") {
+                body.classList.add("dark-theme");
+            }
+
+            toggleBtn.addEventListener("click", () => {
+                body.classList.toggle("dark-theme");
+                localStorage.setItem("theme", body.classList.contains("dark-theme") ? "dark" : "light");
+            });
+
+            const menuToggle = document.getElementById("menu-toggle");
+            const navbar = document.querySelector(".navbar");
+            menuToggle.addEventListener("click", () => {
+                navbar.classList.toggle("open");
+            });
+
+            let lastScrollTop = 0;
+            window.addEventListener("scroll", () => {
+                let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+                if (currentScroll > lastScrollTop) {
+                    navbar.classList.add("hidden");
+                } else {
+                    navbar.classList.remove("hidden");
+                }
+                lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+            });
+        });
+    </script>
+
+</body>
+</html>

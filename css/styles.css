@@ -340,3 +340,63 @@ footer {
     width: 100%;
   }
 }
+
+.terminal-container {
+  display: flex;
+  justify-content: center;  
+  align-items: center;      
+  height: 75vh;           
+  width: 100%;              
+}
+
+.terminal {
+  background-color: #0d0d0d;
+  border: 2px solid var(--accent);
+  padding: 20px;
+  width: 80%;
+  max-width: 800px;
+  height: 400px;
+  overflow-y: auto;
+  box-shadow: 0 0 10px var(--accent);
+  font-size: 18px;
+  line-height: 1.4;
+  color: var(--accent);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.terminal .output {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.terminal .input-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.terminal .input-container span {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.terminal .input {
+  color: var(--accent);
+  outline: none;
+  background: none;
+  border: none;
+  width: 90%;
+  font-size: 18px;
+  padding: 5px 0;
+}
+
+.terminal ul {
+    padding-left: 20px; 
+    list-style-type: none; 
+}
+
+.terminal ul li::before {
+    content: "- ";
+}
