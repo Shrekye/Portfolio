@@ -44,77 +44,95 @@
 
     <script>
         const commands = {
-                'help': `Commandes disponible:
-                <ul>
-                    <li>ls projets</li>
-                    <li>cat about.txt</li>
-                    <li>ping me</li>
-                    <li>clear</li>
-                </ul>`,
-            'ls projets': '1. Projet Sécurisation Web\n2. Audits de sécurité\n3. Formation Cybersécurité',
-            'cat about.txt': 'Je suis un passionné de cybersécurité, expert en penetration testing et sécurisation des systèmes. Mon but est de rendre le monde numérique plus sûr.',
-            'ping me': 'Email: contact@cybersec.com\nLinkedIn: linkedin.com/in/monprofil',
+            'help': `Commandes disponibles :
+            <ul>
+                <li>ls experience</li>
+                <li>ls diplomes</li>
+                <li>ls competences</li>
+                <li>cat about.txt</li>
+                <li>contact</li>
+                <li>clear</li>
+            </ul>`,
+
+            'cat about.txt': `
+        Pentester / Auditeur cybersécurité en formation.
+        Spécialisé en sécurité offensive, audit de sécurité global et analyse des risques.
+        Approche méthodologique, rigoureuse et conforme aux cadres légaux (OWASP, PTES, OSSTMM).
+            `,
+
+            'ls experience': `
+        <b>Pentester / Auditeur cyber (Stage)</b><br>
+        2025 | Vaux-en-Velin | France<br>
+        - Pentest réseau et audit de sécurité global en autonomie<br>
+        - Reconnaissance, cartographie, exploitation<br>
+        - Analyse réseaux, systèmes, Active Directory<br>
+        - Évaluation des risques et rédaction de rapports d’audit<br>
+        - Méthodologies OWASP, PTES, OSSTMM<br><br>
+
+        <b>Réserviste en Gendarmerie</b><br>
+        2025 | France<br>
+        - Engagement opérationnel<br>
+        - Rigueur, discipline, respect du cadre légal<br>
+        - Gestion de situations exigeantes et coordination inter-acteurs<br><br>
+
+        <b>Préparation Militaire Terre</b><br>
+        2024 | 5e RIAOM | Djibouti<br>
+        - Formation en environnement contraint<br>
+        - Résilience physique et mentale<br>
+        - Leadership, discipline, respect strict des procédures
+            `,
+
+            'ls diplomes': `
+        <b>Bachelor Cybersécurité</b><br>
+        Guardia Cybersecurity School – Lyon<br>
+        Depuis 2024 (en cours)<br>
+        - Plus de 24 projets cybersécurité réalisés
+            `,
+
+            'ls competences': `
+        <b>Sécurité offensive & Pentesting</b><br>
+        - Pentests applicatifs & systèmes<br>
+        - Nmap, Burp Suite, Hydra, Hashcat<br>
+        - WinPEAS / LinPEAS<br>
+        - Audit Active Directory, politiques de mots de passe<br>
+        - Durcissement et segmentation réseau<br><br>
+
+        <b>OSINT & Investigation</b><br>
+        - Google Dorks, Shodan, TheHarvester<br>
+        - Wayback Machine, cartographie de surface d’attaque<br><br>
+
+        <b>GRC</b><br>
+        - Analyse des risques<br>
+        - Cartographie des menaces<br>
+        - ISO 27001, RGPD<br><br>
+
+        <b>Gestion de crise & Réponse à incident</b><br>
+        - Plans de réponse à incident<br>
+        - Communication de crise<br>
+        - Retours d’expérience (REX)<br><br>
+
+        <b>DevSecOps & Développement</b><br>
+        - HTML5, CSS3, JavaScript, PHP, SQL, Python<br>
+        - Sécurisation du code et des workflows<br><br>
+
+        <b>Réseaux & Systèmes</b><br>
+        - DHCP, DNS, firewall<br>
+        - Active Directory, SIEM, IDS/IPS, proxy<br>
+        - Nginx, reverse proxy, supervision<br><br>
+
+        <b>Reverse Engineering & IoT</b><br>
+        - Analyse de binaires<br>
+        - Sécurité IoT (Arduino, ESP32, UART/ISP, Wi-Fi)<br>
+        - Projet détecteur de fumée : PCB, dump firmware, MQTT (Tuya)
+            `,
+
+            'contact': `
+        Email : contact@cybersec.com<br>
+        LinkedIn : linkedin.com/in/monprofil
+            `,
+
             'clear': ''
         };
-
-        const output = document.getElementById('output');
-        const commandInput = document.getElementById('command-input');
-
-        function handleCommand(command) {
-            if (commands[command] !== undefined) {
-                if (command === 'clear') {
-                    output.innerHTML = 'Bienvenue dans le terminal. Tapez "help" pour voir les commandes disponibles.';  
-                } else {
-                    output.innerHTML += `<p>> ${commands[command]}</p>`;
-                }
-            } else {
-                output.innerHTML += `<p>> Commande inconnue. Tapez "help" pour les commandes disponibles.</p>`;
-            }
-            output.scrollTop = output.scrollHeight; 
-            commandInput.focus(); 
-        }
-
-        commandInput.addEventListener('keypress', function (e) {
-            if (e.key === 'Enter') {
-                const command = commandInput.value.trim();
-                if (command !== '') {
-                    output.innerHTML += `<p>$ ${command}</p>`;
-                    handleCommand(command);
-                    commandInput.value = ''; 
-                }
-            }
-        });
-
-        document.addEventListener("DOMContentLoaded", () => {
-            const toggleBtn = document.getElementById("theme-toggle");
-            const body = document.body;
-
-            if (localStorage.getItem("theme") === "dark") {
-                body.classList.add("dark-theme");
-            }
-
-            toggleBtn.addEventListener("click", () => {
-                body.classList.toggle("dark-theme");
-                localStorage.setItem("theme", body.classList.contains("dark-theme") ? "dark" : "light");
-            });
-
-            const menuToggle = document.getElementById("menu-toggle");
-            const navbar = document.querySelector(".navbar");
-            menuToggle.addEventListener("click", () => {
-                navbar.classList.toggle("open");
-            });
-
-            let lastScrollTop = 0;
-            window.addEventListener("scroll", () => {
-                let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-                if (currentScroll > lastScrollTop) {
-                    navbar.classList.add("hidden");
-                } else {
-                    navbar.classList.remove("hidden");
-                }
-                lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-            });
-        });
     </script>
 
 </body>
