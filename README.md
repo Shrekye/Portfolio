@@ -2,7 +2,12 @@
 
 ## Technologies utilisées
 
-[HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) | [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) | [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) | [GitHub Pages](https://pages.github.com/) | [Responsive Design](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design) | [AOS.js](https://michalsnik.github.io/aos/) | [Font Awesome](https://fontawesome.com/)
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)  
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)  
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)  
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-181717?style=for-the-badge&logo=github&logoColor=white)](https://pages.github.com/)  
+[![AOS](https://img.shields.io/badge/AOS-000000?style=for-the-badge&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABvElEQVQ4T42SvUoDQRRF39HNRJ0BVMwGxvUh6BIyI1MzMm+gL1A5BYSZKyFqwiAtsZLgCTKaQQrF1aMbf7vPvbJ3uXX88Oz8fn70+Gw7wKqHwHdh7oy54FL1Wfw4BB1CQAIYwIh+CJLgCrQ2MPvR0K6ACFoAw4FEeXy2N3+9V3G6gTShFM0AQjwVdU1o4sGpxU0BqaAmP3iSA8COhF7O+QXngvAZtYAyXzPK/ZkAL7NkM90QA3iJ0G0yGvDJCOwAb7tgAnQD4CL8FCtwrEmW9wBvINNGIuhG+tlG+3ygdLxZc9J+7ZNN4P/N5AOeB+S8Z+z4BLaq4URx0m2wKNsl16BbtgKLDXINbQxwH1zQ62ZpuzB+6p+19xBG+6EN+qI+9R33d1s1WgAAAABJRU5ErkJggg==)](https://michalsnik.github.io/aos/)  
+[![Font Awesome](https://img.shields.io/badge/Font_Awesome-528DD7?style=for-the-badge&logo=font-awesome&logoColor=white)](https://fontawesome.com/)
 
 ## Description
 
