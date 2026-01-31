@@ -14,9 +14,9 @@
 ### Statistiques GitHub
 
 [![License](https://img.shields.io/github/license/Shrekye/Portfolio?style=flat-square)](https://github.com/Shrekye/Portfolio/blob/main/LICENSE)
-[![Stars](https://img.shields.io/github/stars/Shrekye/Portfolio?style=flat-square)](https://github.com/Shrekye/Portfolio/stargazers)
-[![Forks](https://img.shields.io/github/forks/Shrekye/Portfolio?style=flat-square)](https://github.com/Shrekye/Portfolio/network/members)
-[![Watchers](https://img.shields.io/github/watchers/Shrekye/Portfolio?style=flat-square)](https://github.com/Shrekye/Portfolio/watchers)
+[![GitHub Stars](https://img.shields.io/github/stars/Shrekye/Portfolio?style=flat-square&logo=github&logoColor=white)](https://github.com/Shrekye/Portfolio/stargazers)
+[![GitHub Forks](https://img.shields.io/github/forks/Shrekye/Portfolio?style=flat-square&logo=github&logoColor=white)](https://github.com/Shrekye/Portfolio/network/members)
+[![GitHub Watchers](https://img.shields.io/github/watchers/Shrekye/Portfolio?style=flat-square&logo=github&logoColor=white)](https://github.com/Shrekye/Portfolio/watchers)
 
 ## Description
 
