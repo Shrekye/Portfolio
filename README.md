@@ -2,20 +2,21 @@
 
 ## Technologies & Badges
 
-[![Technologie: HTML](https://img.shields.io/badge/Technologie-HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)  
-[![Technologie: CSS](https://img.shields.io/badge/Technologie-CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)  
-[![Technologie: JavaScript](https://img.shields.io/badge/Technologie-JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)  
-[![Technologie: Tailwind CSS](https://img.shields.io/badge/Technologie-Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)  
-[![Technologie: React](https://img.shields.io/badge/Technologie-React-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://reactjs.org/)  
-[![Technologie: GitHub Pages](https://img.shields.io/badge/Technologie-GitHub%20Pages-181717?style=for-the-badge&logo=github&logoColor=white)](https://pages.github.com/)  
-[![Technologie: AOS.js](https://img.shields.io/badge/Technologie-AOS-000000?style=for-the-badge)](https://michalsnik.github.io/aos/)  
+[![Technologie: HTML](https://img.shields.io/badge/Technologie-HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![Technologie: CSS](https://img.shields.io/badge/Technologie-CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![Technologie: JavaScript](https://img.shields.io/badge/Technologie-JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![Technologie: Tailwind CSS](https://img.shields.io/badge/Technologie-Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![Technologie: React](https://img.shields.io/badge/Technologie-React-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://reactjs.org/)
+[![Technologie: GitHub Pages](https://img.shields.io/badge/Technologie-GitHub%20Pages-181717?style=for-the-badge&logo=github&logoColor=white)](https://pages.github.com/)
+[![Technologie: AOS.js](https://img.shields.io/badge/Technologie-AOS-000000?style=for-the-badge)](https://michalsnik.github.io/aos/)
 [![Technologie: Font Awesome](https://img.shields.io/badge/Technologie-Font_Awesome-528DD7?style=for-the-badge&logo=font-awesome&logoColor=white)](https://fontawesome.com/)
 
 ### Statistiques GitHub
-![GitHub license](https://img.shields.io/github/license/shrekye/Portfolio)
-![GitHub stars](https://img.shields.io/github/stars/shrekye/Portfolio?style=social)
-![GitHub forks](https://img.shields.io/github/forks/shrekye/Portfolio?style=social)
-![GitHub watchers](https://img.shields.io/github/watchers/shrekye/Portfolio?style=social)
+
+[![GitHub license](https://img.shields.io/github/license/Shrekye/Portfolio?style=for-the-badge)](https://github.com/Shrekye/Portfolio/blob/main/LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/Shrekye/Portfolio?style=for-the-badge)](https://github.com/Shrekye/Portfolio/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/Shrekye/Portfolio?style=for-the-badge)](https://github.com/Shrekye/Portfolio/network/members)
+[![GitHub watchers](https://img.shields.io/github/watchers/Shrekye/Portfolio?style=for-the-badge)](https://github.com/Shrekye/Portfolio/watchers)
 
 ## Description
 
