@@ -2,14 +2,12 @@
 
 ## Technologies & Badges
 
-[![Technologie: HTML](https://img.shields.io/badge/Technologie-HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
-[![Technologie: CSS](https://img.shields.io/badge/Technologie-CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
-[![Technologie: JavaScript](https://img.shields.io/badge/Technologie-JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-[![Technologie: Tailwind CSS](https://img.shields.io/badge/Technologie-Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-[![Technologie: React](https://img.shields.io/badge/Technologie-React-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://reactjs.org/)
-[![Technologie: GitHub Pages](https://img.shields.io/badge/Technologie-GitHub%20Pages-181717?style=for-the-badge&logo=github&logoColor=white)](https://pages.github.com/)
-[![Technologie: AOS.js](https://img.shields.io/badge/Technologie-AOS-000000?style=for-the-badge)](https://michalsnik.github.io/aos/)
-[![Technologie: Font Awesome](https://img.shields.io/badge/Technologie-Font_Awesome-528DD7?style=for-the-badge&logo=font-awesome&logoColor=white)](https://fontawesome.com/)
+[![Technologie: HTML](https://img.shields.io/badge/Technologie–HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![Technologie: CSS](https://img.shields.io/badge/Technologie–CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![Technologie: JavaScript](https://img.shields.io/badge/Technologie–JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![Technologie: AOS.js](https://img.shields.io/badge/Technologie–AOS-000000?style=for-the-badge)](https://michalsnik.github.io/aos/)
+[![Technologie: Font Awesome](https://img.shields.io/badge/Technologie–Font_Awesome-528DD7?style=for-the-badge&logo=font-awesome&logoColor=white)](https://fontawesome.com/)
+[![Technologie: GitHub Pages](https://img.shields.io/badge/Technologie–GitHub%20Pages-181717?style=for-the-badge&logo=github&logoColor=white)](https://pages.github.com/)
 
 ### Statistiques GitHub
 
