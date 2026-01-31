@@ -1,5 +1,9 @@
 # Portfolio d'Erwann Dumas
 
+## Technologies utilisées
+
+[HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) | [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) | [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) | [GitHub Pages](https://pages.github.com/) | [Responsive Design](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design) | [AOS.js](https://michalsnik.github.io/aos/) | [Font Awesome](https://fontawesome.com/)
+
 ## Description
 
 Ce portfolio présente mon parcours en cybersécurité et rassemble mes expériences, formations, compétences, projets ainsi que mes moyens de contact.
